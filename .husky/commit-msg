@@ -1,0 +1,4 @@
+# check commit message
+node "$(dirname -- "$0")/valid-msg.mjs" "$1" 
+# add emoji prefix
+node "$(dirname -- "$0")/prefix-emoji.mjs" "$1"  

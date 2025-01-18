@@ -1,0 +1,39 @@
+.header {
+  height: 100px;
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.pages {
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.pages h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.layers {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.layers h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+}

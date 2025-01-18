@@ -1,0 +1,123 @@
+:root {
+  --bg-color: #1a1a1a;
+  --panel-bg: #2d2d2d;
+  --text-color: #ffffff;
+  --border-color: #444444;
+  --hover-bg: #3a3a3a;
+}
+
+.editor-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.left-panel {
+  background-color: var(--panel-bg);
+  border-right: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.left-panel-header {
+  height: 100px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.left-panel-pages {
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.left-panel-layers {
+  flex: 1;
+}
+
+.right-panel {
+  background-color: var(--panel-bg);
+  border-right: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+
+.canvas-area {
+  background-color: var(--bg-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.left-panel,
+.right-panel {
+  width: 240px;
+  min-width: 160px;
+  max-width: 400px;
+  overflow: auto;
+  position: relative;
+}
+
+.canvas-area {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+.toolbar {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: rgba(45, 45, 45, 0.9);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.toolbar-button {
+  padding: 6px 10px;
+  font-size: 13px;
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.toolbar-button:hover {
+  background: var(--hover-bg);
+  transform: translateY(-1px);
+}
+
+.toolbar-button:active {
+  transform: translateY(0);
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  cursor: ew-resize;
+  z-index: 1;
+  background: transparent;
+}
+
+.left-panel .resizer {
+  right: -3px;
+}
+
+.right-panel .resizer {
+  left: -3px;
+}
+
+.resizer:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

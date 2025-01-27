@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import Toolbar from "./toolbar.tsx";
+import Toolbar from "./toolbar.js";
 
 interface CanvasAreaProps {
   children?: ReactNode;

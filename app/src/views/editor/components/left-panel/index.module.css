@@ -11,29 +11,51 @@
   color: var(--text-color);
 }
 
-.pages {
-  flex: 1;
-  border-bottom: 1px solid var(--border-color);
+.pagesContainer {
+  height: calc(50% - 50px);
   padding: 16px;
   overflow-y: auto;
 }
 
-.pages h4 {
+.pagesContainer h3 {
   margin: 0 0 12px 0;
   font-size: 14px;
   font-weight: 500;
   color: var(--text-color);
 }
 
-.layers {
-  flex: 1;
-  padding: 16px;
+.layersContainer {
+  height: 50%;
   overflow-y: auto;
 }
 
-.layers h4 {
+.layersContainer h3 {
   margin: 0 0 12px 0;
   font-size: 14px;
   font-weight: 500;
+  color: var(--text-color);
+}
+
+.section {
+  margin-bottom: 8px;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px;
+  background: var(--background-color);
+  border: none;
+  cursor: pointer;
+}
+
+.toggleButton:hover {
+  background: var(--hover-background);
+}
+
+.arrow {
+  font-size: 12px;
   color: var(--text-color);
 }

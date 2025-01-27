@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
-import LeftPanel from './components/left-panel/index';
-import RightPanel from './components/right-panel';
-import CanvasArea from './components/canvas-area';
-import './editor.css';
+import { useRef, useState } from "react";
+import LeftPanel from "./components/left-panel/index";
+import RightPanel from "./components/right-panel";
+import CanvasArea from "./components/canvas-area";
+import "./editor.css";
 
 const Editor = () => {
   const [leftWidth, setLeftWidth] = useState(240);
@@ -30,12 +30,12 @@ const Editor = () => {
     };
 
     const onMouseUp = () => {
-      window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('mouseup', onMouseUp);
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
     };
 
-    window.addEventListener('mousemove', onMouseMove);
-    window.addEventListener('mouseup', onMouseUp);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
   };
 
   return (
@@ -45,10 +45,8 @@ const Editor = () => {
         width={leftWidth}
         onMouseDown={() => startResizing(leftResizerRef, setLeftWidth)}
       />
-      
-      <CanvasArea>
-        Canvas Content
-      </CanvasArea>
+
+      <CanvasArea>Canvas Content</CanvasArea>
 
       <RightPanel
         ref={rightResizerRef}

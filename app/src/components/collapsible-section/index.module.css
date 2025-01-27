@@ -1,0 +1,36 @@
+.section {
+  margin-bottom: 12px;
+}
+
+.toggleButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 8px 8px 16px;
+  background: var(--background-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.toggleButton:hover {
+  background: var(--background-hover-color);
+}
+
+.arrow {
+  font-size: 8px;
+  color: var(--text-color);
+  position: absolute;
+  left: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.toggleButton:hover .arrow {
+  opacity: 1;
+}
+
+.content {
+  padding: 8px 8px 8px 16px;
+}
